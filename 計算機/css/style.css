@@ -1,0 +1,163 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.calculator {
+  width: 350px;
+  height: 525px;
+  margin: 30px auto;
+}
+
+.calculator .screen {
+  background-color: #041936;
+  border-radius: 20px 20px 0px 0px;
+  padding: 20px;
+  text-align: right;
+  word-wrap: break-word;
+}
+
+.calculator .screen .equation {
+  font-size: 16px;
+  color: #00C4FF;
+}
+
+.calculator .screen .total {
+  font-size: 56px;
+  color: white;
+}
+
+.calculator .button {
+  height: 416px;
+  background-color: #062145;
+  border-radius: 0px 0px 20px 20px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.calculator .button span {
+  width: 72px;
+  height: 64px;
+  padding: 20px 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.calculator .button span:hover {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+
+.calculator .button .row {
+  color: white;
+  font-size: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.calculator .button .row .operator {
+  background-color: #041936;
+  border-radius: 16px;
+}
+
+.calculator .button .row .adjust {
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
+}
+
+.calculator .button .rowBtm {
+  color: #00C4FF;
+  font-size: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.calculator .button .rowBtm .equal {
+  width: 144px;
+  text-align: right;
+  color: white;
+  background: transparent -webkit-gradient(linear, left top, right top, from(#00C4FF), to(#6C00FF)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, #00C4FF 0%, #6C00FF 100%) 0% 0% no-repeat padding-box;
+  border-radius: 16px;
+}
+
+.calculator .button .rowBtm .adjust {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+/*# sourceMappingURL=計算機.css.map */
