@@ -6,6 +6,8 @@ let timeZone = [
   { place: 'TAIWAN', timeZone: 'Asia/Taipei' },
   { place: 'SYDNEY', timeZone: 'Australia/Sydney' }]
 
+getTime() //初始畫面不用等一秒
+
 function getTime() {
   let str = '';
   timeZone.forEach(item => {
