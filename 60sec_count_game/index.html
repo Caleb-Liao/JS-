@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>60秒算術遊戲</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="index">
+      <div class="title_index">
+        <h1>60</h1>
+        <h2>SECONDS<br>CHALLENGE<span>+−×÷</span></h2>
+      </div>
+      <div class="button">
+        <a href="#" class="toMain">START!</a>
+        <p>try to answer more as you can</p>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="title_main">
+        <div>
+          <p>60 SECONDS CHALLENGE</p>
+          <div class="score_box">
+            <span>SCORE</span>
+            <div class="score">000</div>
+          </div>
+        </div>
+        <div class="time">00:60</div>
+      </div>
+
+      <div class="question">
+        <div class="number_first"></div>
+        <div class="operator">×</div>
+        <div class="number_second"></div>
+        <div class="equal">=</div>
+        <div class="answer_box">
+          <input class="answer">
+          <h3>press enter to answer</h3>
+          <h4>round to the nearest tenth (1.68 → 1.7)</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="restart">
+      <div class="title_restart">
+        <p>60 SECONDS CHALLENGE</p>
+        <h1><span>—</span> YOUR FINAL SCORE <span>—</span></h1>
+        <div class="total_score"></div>
+      </div>
+      <div class="button">
+        <a href="#" class="toIndex">TRY AGAIN!</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
