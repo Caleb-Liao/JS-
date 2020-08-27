@@ -1,0 +1,182 @@
+body{
+    font-family: 微軟正黑體;
+}
+
+.wrap{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.header{
+    height: 300px;
+    background-color: #424242;
+    display: flex;
+    align-items: center;
+}
+
+.header img{
+    margin-left: 12%;
+    width: 12%;
+}
+
+@media(max-width:576px){
+    .header img{
+        margin-left: 0;
+        width: 25%;
+    }
+}
+
+.data{
+    width: 25%;
+    margin: 0 12%;
+    color: #FFD366;
+}
+
+.data p{
+    margin-bottom: 10px;
+}
+
+.data input{
+    width: 100%;
+    height: 24px;
+    border-radius: 10px;
+    border: 2px solid #FFD366;
+    font-size: 24px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.18);
+    padding: 10px;
+}
+
+::-webkit-input-placeholder{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.send{
+    background-color: #FFD366;
+    width: 11.7%;
+    height: 0;
+    padding-bottom: 11.7%;  /*這行加上行可以讓div隨寬度等比例，因為padding以百分比形式時，基數是以父元素的「寬度」而定*/
+    border: none;
+    border-radius: 50%;
+    color: #424242;
+    font-size: 2vw;
+    font-family: 微軟正黑體;
+    position: relative;
+}
+
+.send span{
+    font-size: 2vw;
+    position: absolute;
+    top: 33%;
+    right: 0;
+    left: 0;
+}
+
+@media(max-width:576px){
+    .send{
+        width: 25%;
+        padding-bottom: 25%;
+    }
+
+    .send span{
+        top:40%;
+        font-size: 4vw;
+    }
+}
+
+.send:hover, .send:active{
+    cursor: pointer;  
+}
+
+.main{
+    background-color: #F5F5F5;
+}
+
+.main h1{
+    text-align: center;
+    padding: 30px 0;
+}
+
+.list{
+    list-style: none;
+    padding: 0 15% 20px 15%;
+}
+
+@media(max-width:991px){
+    .list{
+        padding: 0 0 20px 0;
+    }     
+}
+
+@media(max-width:576px){
+    .date{
+        display: none;
+    }
+}
+
+.list li{
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.list .shape{
+    width: 25%;
+    padding-left: 10px;
+    background-color: #FAFAFA;
+}
+
+.list small{
+    padding-right: 10px;
+    font-size: 12px !important;
+}
+
+.list .level1{
+    border-left: 10px solid #2f00ff;
+}
+
+.list .level2{
+    border-left: 10px solid #168eff;
+}
+
+.list .level3{
+    border-left: 10px solid #31BAF9;
+}
+
+.list .level4{
+    border-left: 10px solid #86D73F;
+}
+
+.list .level5{
+    border-left: 10px solid #fbaf23;
+}
+
+.list .level6{
+    border-left: 10px solid #ff7300;
+}
+
+.list .level7{
+    border-left: 10px solid #fa3200;
+}
+
+.list .level8{
+    border-left: 10px solid #ff0000;
+}
+
+.listdelete{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.delete{
+    color: #103E53;
+}
+
+.footer{
+    height: 90px;
+    background-color: #FFD366;
+}

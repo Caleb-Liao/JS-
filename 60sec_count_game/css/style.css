@@ -261,12 +261,12 @@ body {
   padding: 5px;
 }
 
-.wrapper .restart .title_restart h1 {
+.wrapper .restart .title_restart h2 {
   font-size: 56px;
   margin: 20px 0;
 }
 
-.wrapper .restart .title_restart h1 span {
+.wrapper .restart .title_restart h2 span {
   color: white;
 }
 
