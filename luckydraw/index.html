@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>幸運抽獎!</title>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js'></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="wrapper">
+      <h1>幸運抽獎 !!</h1>
+      <ul class="box" :class="{ light: light == true }">
+          <p @click="start">抽獎</p>
+          <li v-for="item in coupon" :key="item.order" :class="{ active: index === item.order }">{{item.name}}</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        coupon: [
+          {
+            name: '買一送一',
+            text: '優惠碼: buy1get1free',
+            order: 1
+          },
+          {
+            name: '銘謝惠顧',
+            text: '不要難過，再給你一次機會',
+            order: 2
+          },
+          {
+            name: '一折',
+            text: '優惠碼: 90percentoff',
+            order: 3
+          },
+          {
+            name: '五折',
+            text: '優惠碼: 50percentoff',
+            order: 8
+          },
+          {
+            name: '銘謝惠顧',
+            text: '小本生意，就不好意思囉~',
+            order: 4,
+          },
+          {
+            name: '九折',
+            text: '優惠碼: 10percentoff',
+            order: 7
+          },
+          {
+            name: '買一送一',
+            text: '優惠碼: buy1get1free',
+            order: 6
+          },
+          {
+            name: '老闆簽名',
+            text: '優惠碼: bestluckyprize',
+            order: 5
+          }
+        ],
+        index: 1,
+        count: 8,
+        prize: null,
+        times: 0,
+        speed: 300,
+        lightSwitch: null,
+        light: false
+      },
+
+      methods: {
+        start () {
+          // 初始化
+          this.index = 1
+          this.times = 0
+          this.speed = 300
+          // 決定獎項
+          this.prize = Math.floor(Math.random() * 8) + 1
+          this.roll()
+          this.lightSwitch = setInterval(() => {
+            this.light = !this.light
+          }, 500);
+        },
+
+        roll () {
+          setTimeout(() => {
+            this.index ++
+            this.times ++
+            // 亮燈循環
+            if (this.index > this.count ){
+              this.index = 1
+            }
+            this.changeSpeed()
+          }, this.speed);
+        },
+
+        changeSpeed () {
+          // 轉40格之前加速
+          if (this.times < 40 ) {
+            this.speed -= 6
+            this.roll()
+          // 轉40格之後緩速
+          } else {
+            this.speed += 20
+            // 60格之前都要一直轉，60格之後中獎就跳出通知
+            if (this.times > 60 && this.prize === this.index) {
+              this.coupon.forEach(item => {
+                if (item.order === this.prize) {
+                  // 要延遲一點，因為alert會比畫面早一點點導致不同步
+                  setTimeout(() => {
+                    swal(`恭喜抽到：${item.name}`, item.text, "success");
+                  }, 500)
+                }
+              })
+              clearInterval(this.lightSwitch)
+            } else {
+              this.roll()
+            }
+          }
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

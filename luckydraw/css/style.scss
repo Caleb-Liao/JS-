@@ -1,0 +1,126 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// css reset end
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #eeeeee;
+}
+
+.wrapper{
+  font-family: Microsoft JhengHei;
+  color: #52575d;
+  width: 800px;
+  margin: 10% auto;
+  .light{
+    background-color: #bbe1fa;
+  }
+  h1{
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 50px;
+  }
+  ul{
+    width: 350px;
+    height: 350px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #a2d5f2;
+    border: 5px solid #07689f;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    li{
+      font-size: 18px;
+      font-weight: 600;
+      width: 30%;
+      height: 30%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #07689f;
+      border-radius: 10px;
+      &:nth-of-type(4){
+        margin-right: 30%;
+      }
+    }
+    .active{
+      background-color: #f7e7bd;
+    }
+    p{
+      cursor: pointer;
+      font-size: 24px;
+      font-weight: 600;
+      position: absolute;
+      background-color: white;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 27%;
+      height: 27%;
+      border: 3px solid #0f3460;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover{
+        background-color: #0f3460;
+        color: white;
+      }
+    }
+  }
+}
